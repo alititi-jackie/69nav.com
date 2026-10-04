@@ -74,7 +74,8 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 footer a{color:var(--muted);text-decoration:none;font-weight:700}
 footer a:hover{color:#2563eb}
-.hero{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 4px;position:relative;overflow:hidden}
+.hero{display:block;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 4px;position:relative;overflow:hidden;color:var(--ink);text-decoration:none;transition:transform .15s,box-shadow .15s}
+.hero:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(0,0,0,.15)}
 .hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
 .hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
 .hero p{margin:0;color:var(--muted);font-size:15px}
