@@ -26,9 +26,7 @@
   </script>
   <style>
     body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #000; color: #ffd700; overflow: hidden; }
-    header { background: linear-gradient(to right, #000, #1c1c1c); padding: 1rem 1rem 1rem 3.5rem; text-align: center; position: relative; box-shadow: 0 2px 8px rgba(0,0,0,0.10);}
-    .home-link { position: absolute; left: 1rem; top: 1.2rem; color: #ffd700; background: #222; padding: 0.35rem 0.9rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; border: 1px solid #ffd700; transition: 0.2s; z-index: 10; box-shadow: 0 1px 4px rgba(0,0,0,0.10);}
-    .home-link:hover { background: #ffd700; color: #000;}
+    header { background: linear-gradient(to right, #000, #1c1c1c); padding: 1rem; text-align: center; position: relative; box-shadow: 0 2px 8px rgba(0,0,0,0.10);}
     .lang-switch { position: absolute; right: 1rem; top: 1.2rem; z-index: 10; }
     .lang-btn { background:#222; color:#ffd700; border:1px solid #ffd700; border-radius:6px; padding:0.27rem 0.9rem; margin-left:4px; cursor:pointer; font-weight:bold; }
     .lang-btn.active, .lang-btn:hover { background:#ffd700; color:#000; }
@@ -54,8 +52,7 @@
       section { margin: 1.2rem 0.6rem 1.2rem 0.6rem;}
       .grid { gap: 0.7rem;}
       .link { padding: 0.8rem 0.2rem; font-size: 0.98rem;}
-      header { padding: 1rem 0.5rem 1rem 2.5rem;}
-      .home-link { left: 0.5rem; top: 1rem; font-size: 0.98rem; padding: 0.26rem 0.7rem;}
+      header { padding: 1rem 0.5rem;}
       .lang-switch { right: 0.5rem; top: 1rem;}
     }
   </style>
@@ -79,7 +76,6 @@
     <button onclick="location.href='https://www.openaa.com'" id="btn-no">No, Leave</button>
   </div>
   <header>
-    <a href="https://www.openaa.com/" class="home-link" id="home-link">Back Home</a>
     <div class="lang-switch">
       <a href="https://69nav.com/guides/" class="lang-btn" style="text-decoration:none; display:inline-block;">Guides 指南</a>
       <button class="lang-btn" id="btn-zh" onclick="switchLang('zh')">中文</button>
@@ -255,7 +251,6 @@
       document.getElementById('mainGrid-en').classList.toggle('hidden', lang !== 'en');
       document.getElementById('footer-zh').classList.toggle('hidden', lang !== 'zh');
       document.getElementById('footer-en').classList.toggle('hidden', lang !== 'en');
-      document.getElementById('home-link').textContent = lang === 'zh' ? '返回首页' : 'Back Home';
       document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       // 弹窗也切换
